@@ -1,0 +1,8 @@
+{
+  "name": "nanobody-pipeline",
+  "build": {
+    "dockerfile": "../docker/Dockerfile",
+    "context": ".."
+  },
+  "postCreateCommand": "pip install -r requirements.txt"
+}

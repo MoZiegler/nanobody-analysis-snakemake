@@ -1,0 +1,138 @@
+Assuming unrestricted shared filesystem usage.
+host: Moritz-Idea
+Building DAG of jobs...
+Need to rerun job scoring because of missing output required by all.
+Need to rerun job features because of missing output required by scoring.
+Need to rerun job structure because of missing output required by scoring.
+Need to rerun job all because job scoring has to be rerun.
+Need to rerun job preprocess because of missing output required by features.
+Need to rerun job scoring because job features has to be rerun.
+Need to rerun job scoring because job structure has to be rerun.
+Need to rerun job features because job preprocess has to be rerun.
+Need to rerun job structure because job preprocess has to be rerun.
+: False 1
+results/report.csv: False 2
+data/structures.json: False 1
+data/cleaned.fasta: True 0
+data/features.csv: False 1
+shared_storage_local_copies: True
+remote_exec: False
+Submitting maximum 100 job(s) over 1.0 second(s).
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job           count
+----------  -------
+preprocess        1
+features          1
+structure         1
+scoring           1
+all               1
+total             5
+
+Resources before job selection: {'_cores': 1, '_nodes': 9223372036854775807, '_job_count': 9223372036854775807}
+Ready jobs: 1
+Select jobs to execute...
+Selected jobs: 1
+Resources after job selection: {'_cores': 0, '_nodes': 9223372036854775806, '_job_count': 100}
+Execute 1 jobs...
+[Thu Mar 26 21:51:37 2026]
+localrule preprocess:
+    input: data/input.fasta
+    output: data/cleaned.fasta
+    log: logs/preprocess.log
+    jobid: 3
+    reason: Missing output files: data/cleaned.fasta
+    resources: tmpdir=C:\Users\Morit\AppData\Local\Temp
+Shell command: None
+Waiting for running jobs to complete.
+Full Traceback (most recent call last):
+  File "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\venv\Lib\site-packages\snakemake\executors\local.py", line 434, in run_wrapper
+    run(
+  File "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\Snakefile", line 56, in __rule_preprocess
+  File "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\venv\Lib\site-packages\snakemake\script\__init__.py", line 1509, in script
+    executor.evaluate()
+  File "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\venv\Lib\site-packages\snakemake\script\__init__.py", line 370, in evaluate
+    self.execute_script(fd.name, edit=edit)
+  File "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\venv\Lib\site-packages\snakemake\script\__init__.py", line 614, in execute_script
+    self._execute_cmd(
+  File "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\venv\Lib\site-packages\snakemake\script\__init__.py", line 398, in _execute_cmd
+    return shell(
+           ^^^^^^
+  File "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\venv\Lib\site-packages\snakemake\shell.py", line 359, in __new__
+    raise sp.CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command 'C:/Users/Morit/Desktop/Projekte/nanobody-analysis-snakemake/venv/Scripts/python.exe "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\.snakemake\scripts\tmp1cbr1l4b.preprocess.py"' returned non-zero exit status 1.
+
+Full Traceback (most recent call last):
+  File "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\venv\Lib\site-packages\snakemake\executors\local.py", line 434, in run_wrapper
+    run(
+  File "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\Snakefile", line 56, in __rule_preprocess
+  File "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\venv\Lib\site-packages\snakemake\script\__init__.py", line 1509, in script
+    executor.evaluate()
+  File "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\venv\Lib\site-packages\snakemake\script\__init__.py", line 370, in evaluate
+    self.execute_script(fd.name, edit=edit)
+  File "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\venv\Lib\site-packages\snakemake\script\__init__.py", line 614, in execute_script
+    self._execute_cmd(
+  File "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\venv\Lib\site-packages\snakemake\script\__init__.py", line 398, in _execute_cmd
+    return shell(
+           ^^^^^^
+  File "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\venv\Lib\site-packages\snakemake\shell.py", line 359, in __new__
+    raise sp.CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command 'C:/Users/Morit/Desktop/Projekte/nanobody-analysis-snakemake/venv/Scripts/python.exe "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\.snakemake\scripts\tmp1cbr1l4b.preprocess.py"' returned non-zero exit status 1.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Morit\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\venv\Lib\site-packages\snakemake\executors\local.py", line 236, in cached_or_run
+    self.workflow.async_run(self.acached_or_run(job, run_func, *args))
+  File "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\venv\Lib\site-packages\snakemake\workflow.py", line 268, in async_run
+    return runner.run(coro)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Morit\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Morit\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\venv\Lib\site-packages\snakemake\executors\local.py", line 253, in acached_or_run
+    run_func(*args)
+  File "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\venv\Lib\site-packages\snakemake\executors\local.py", line 471, in run_wrapper
+    raise RuleException(
+snakemake.exceptions.RuleException: CalledProcessError in file "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\Snakefile", line 31:
+Command 'C:/Users/Morit/Desktop/Projekte/nanobody-analysis-snakemake/venv/Scripts/python.exe "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\.snakemake\scripts\tmp1cbr1l4b.preprocess.py"' returned non-zero exit status 1.
+
+RuleException:
+CalledProcessError in file "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\Snakefile", line 31:
+Command 'C:/Users/Morit/Desktop/Projekte/nanobody-analysis-snakemake/venv/Scripts/python.exe "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\.snakemake\scripts\tmp1cbr1l4b.preprocess.py"' returned non-zero exit status 1.
+[Thu Mar 26 21:51:37 2026]
+Error in rule preprocess:
+    message: None
+    jobid: 3
+    input: data/input.fasta
+    output: data/cleaned.fasta
+    log: logs/preprocess.log (check log file(s) for error details)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Thu Mar 26 21:51:37 2026]
+Error in rule preprocess:
+    message: None
+    jobid: 3
+    input: data/input.fasta
+    output: data/cleaned.fasta
+    log: logs/preprocess.log (check log file(s) for error details)
+Complete log(s): C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\.snakemake\log\2026-03-26T215136.670973.snakemake.log
+unlocking
+Full Traceback (most recent call last):
+  File "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\venv\Lib\site-packages\snakemake\cli.py", line 2226, in args_to_api
+    dag_api.execute_workflow(
+  File "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\venv\Lib\site-packages\snakemake\api.py", line 646, in execute_workflow
+    workflow.execute(
+  File "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\venv\Lib\site-packages\snakemake\workflow.py", line 1507, in execute
+    raise WorkflowError("At least one job did not complete successfully.")
+snakemake_interface_common.exceptions.WorkflowError: At least one job did not complete successfully.
+
+WorkflowError:
+At least one job did not complete successfully.

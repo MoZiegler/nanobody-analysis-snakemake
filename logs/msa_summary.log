@@ -1,0 +1,2 @@
+2026-03-27 05:55:22,883 | INFO | Starting MSA summary step: data\msa.fasta -> data\msa_summary.csv
+2026-03-27 05:55:23,023 | INFO | MSA summary completed for 3 sequences.

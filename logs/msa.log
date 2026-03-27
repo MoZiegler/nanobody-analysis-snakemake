@@ -1,0 +1,4 @@
+2026-03-27 05:55:21,349 | INFO | Starting MSA step: data\cleaned.fasta -> data\msa.fasta
+2026-03-27 05:55:21,352 | INFO | Aligning sequence 'nb_002' into progressive MSA.
+2026-03-27 05:55:21,353 | INFO | Aligning sequence 'nb_003' into progressive MSA.
+2026-03-27 05:55:21,356 | INFO | MSA completed for 3 sequences (alignment length: 116).

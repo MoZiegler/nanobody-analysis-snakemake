@@ -1,0 +1,142 @@
+Assuming unrestricted shared filesystem usage.
+host: Moritz-Idea
+Building DAG of jobs...
+Need to rerun job scoring because of missing output required by all.
+Need to rerun job features because of missing output required by scoring.
+Need to rerun job structure because of missing output required by scoring.
+Need to rerun job all because job scoring has to be rerun.
+Need to rerun job preprocess because of missing output required by features.
+Need to rerun job scoring because job features has to be rerun.
+Need to rerun job scoring because job structure has to be rerun.
+Need to rerun job features because job preprocess has to be rerun.
+Need to rerun job structure because job preprocess has to be rerun.
+: False 1
+results/report.csv: False 2
+data/structures.json: False 1
+data/cleaned.fasta: True 0
+data/features.csv: False 1
+shared_storage_local_copies: True
+remote_exec: False
+Submitting maximum 100 job(s) over 1.0 second(s).
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job           count
+----------  -------
+preprocess        1
+features          1
+structure         1
+scoring           1
+all               1
+total             5
+
+Resources before job selection: {'_cores': 1, '_nodes': 9223372036854775807, '_job_count': 9223372036854775807}
+Ready jobs: 1
+Select jobs to execute...
+Selected jobs: 1
+Resources after job selection: {'_cores': 0, '_nodes': 9223372036854775806, '_job_count': 100}
+Execute 1 jobs...
+[Thu Mar 26 21:56:29 2026]
+localrule preprocess:
+    input: data/input.fasta
+    output: data/cleaned.fasta
+    log: logs/preprocess.log
+    jobid: 3
+    reason: Missing output files: data/cleaned.fasta
+    resources: tmpdir=C:\Users\Morit\AppData\Local\Temp
+Shell command: None
+Waiting for running jobs to complete.
+[Thu Mar 26 21:56:32 2026]
+Finished jobid: 3 (Rule: preprocess)
+1 of 5 steps (20%) done
+data/features.csv: True 0
+data/structures.json: True 0
+Handle temp files for job preprocess
+Resources before job selection: {'_cores': 1, '_nodes': 9223372036854775807, '_job_count': 100}
+Ready jobs: 2
+Select jobs to execute...
+Selected jobs: 1
+Resources after job selection: {'_cores': 0, '_nodes': 9223372036854775806, '_job_count': 100}
+Execute 1 jobs...
+[Thu Mar 26 21:56:32 2026]
+localrule features:
+    input: data/cleaned.fasta
+    output: data/features.csv
+    log: logs/features.log
+    jobid: 2
+    reason: Missing output files: data/features.csv; Input files updated by another job: data/cleaned.fasta
+    resources: tmpdir=C:\Users\Morit\AppData\Local\Temp
+Shell command: None
+Waiting for running jobs to complete.
+Resources before job selection: {'_cores': 0, '_nodes': 9223372036854775806, '_job_count': 100}
+Ready jobs: 1
+Select jobs to execute...
+Selected jobs: 0
+Resources after job selection: {'_cores': 0, '_nodes': 9223372036854775806, '_job_count': 100}
+Waiting for running jobs to complete.
+[Thu Mar 26 21:56:34 2026]
+Finished jobid: 2 (Rule: features)
+2 of 5 steps (40%) done
+results/report.csv: False 1
+Handle temp files for job features
+Resources before job selection: {'_cores': 1, '_nodes': 9223372036854775807, '_job_count': 100}
+Ready jobs: 1
+Selected jobs: 1
+Resources after job selection: {'_cores': 0, '_nodes': 9223372036854775806, '_job_count': 100}
+Execute 1 jobs...
+[Thu Mar 26 21:56:34 2026]
+localrule structure:
+    input: data/cleaned.fasta
+    output: data/structures.json
+    log: logs/structure.log
+    jobid: 4
+    reason: Missing output files: data/structures.json; Input files updated by another job: data/cleaned.fasta
+    resources: tmpdir=C:\Users\Morit\AppData\Local\Temp
+Shell command: None
+Waiting for running jobs to complete.
+[Thu Mar 26 21:56:35 2026]
+Finished jobid: 4 (Rule: structure)
+3 of 5 steps (60%) done
+results/report.csv: True 0
+Handle temp files for job structure
+Resources before job selection: {'_cores': 1, '_nodes': 9223372036854775807, '_job_count': 100}
+Ready jobs: 1
+Select jobs to execute...
+Selected jobs: 1
+Resources after job selection: {'_cores': 0, '_nodes': 9223372036854775806, '_job_count': 100}
+Execute 1 jobs...
+[Thu Mar 26 21:56:35 2026]
+localrule scoring:
+    input: data/features.csv, data/structures.json
+    output: results/report.csv
+    log: logs/scoring.log
+    jobid: 1
+    reason: Missing output files: results/report.csv; Input files updated by another job: data/features.csv, data/structures.json
+    resources: tmpdir=C:\Users\Morit\AppData\Local\Temp
+Shell command: None
+Waiting for running jobs to complete.
+[Thu Mar 26 21:56:37 2026]
+Finished jobid: 1 (Rule: scoring)
+4 of 5 steps (80%) done
+: True 0
+Handle temp files for job scoring
+Resources before job selection: {'_cores': 1, '_nodes': 9223372036854775807, '_job_count': 100}
+Ready jobs: 1
+Select jobs to execute...
+Selected jobs: 1
+Resources after job selection: {'_cores': 0, '_nodes': 9223372036854775806, '_job_count': 100}
+Execute 1 jobs...
+[Thu Mar 26 21:56:37 2026]
+localrule all:
+    input: results/report.csv
+    jobid: 0
+    reason: Input files updated by another job: results/report.csv
+    resources: tmpdir=C:\Users\Morit\AppData\Local\Temp
+Shell command: None
+Waiting for running jobs to complete.
+[Thu Mar 26 21:56:37 2026]
+Finished jobid: 0 (Rule: all)
+5 of 5 steps (100%) done
+Handle temp files for job all
+Complete log(s): C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\.snakemake\log\2026-03-26T215628.929473.snakemake.log
+unlocking

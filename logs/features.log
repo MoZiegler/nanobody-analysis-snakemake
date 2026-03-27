@@ -1,0 +1,2 @@
+2026-03-26 21:56:34,006 | INFO | Starting feature extraction: data\cleaned.fasta -> data\features.csv
+2026-03-26 21:56:34,035 | INFO | Feature extraction completed for 3 sequences.

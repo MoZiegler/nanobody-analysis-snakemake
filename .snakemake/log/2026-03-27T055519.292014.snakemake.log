@@ -1,0 +1,77 @@
+Assuming unrestricted shared filesystem usage.
+host: Moritz-Idea
+Building DAG of jobs...
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job            count
+-----------  -------
+msa                1
+structure          1
+msa_summary        1
+scoring            1
+all                1
+total              5
+
+Select jobs to execute...
+Execute 2 jobs...
+[Fri Mar 27 05:55:20 2026]
+localrule msa:
+    input: data/cleaned.fasta
+    output: data/msa.fasta
+    log: logs/msa.log
+    jobid: 5
+    reason: Missing output files: data/msa.fasta
+    resources: tmpdir=C:\Users\Morit\AppData\Local\Temp
+[Fri Mar 27 05:55:20 2026]
+localrule structure:
+    input: data/cleaned.fasta
+    output: data/structures.json, data/pdb
+    log: logs/structure.log
+    jobid: 4
+    reason: Params have changed since last execution: Union of exclusive params before and now across all output: before: 'esmfold' now: 'mock' 
+    resources: tmpdir=C:\Users\Morit\AppData\Local\Temp
+[Fri Mar 27 05:55:21 2026]
+Finished jobid: 5 (Rule: msa)
+1 of 5 steps (20%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Fri Mar 27 05:55:21 2026]
+localrule msa_summary:
+    input: data/msa.fasta
+    output: data/msa_summary.csv
+    log: logs/msa_summary.log
+    jobid: 6
+    reason: Missing output files: data/msa_summary.csv; Input files updated by another job: data/msa.fasta
+    resources: tmpdir=C:\Users\Morit\AppData\Local\Temp
+[Fri Mar 27 05:55:21 2026]
+Finished jobid: 4 (Rule: structure)
+2 of 5 steps (40%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Fri Mar 27 05:55:21 2026]
+localrule scoring:
+    input: data/features.csv, data/structures.json
+    output: results/report.csv
+    log: logs/scoring.log
+    jobid: 1
+    reason: Input files updated by another job: data/structures.json
+    resources: tmpdir=C:\Users\Morit\AppData\Local\Temp
+[Fri Mar 27 05:55:23 2026]
+Finished jobid: 6 (Rule: msa_summary)
+3 of 5 steps (60%) done
+[Fri Mar 27 05:55:23 2026]
+Finished jobid: 1 (Rule: scoring)
+4 of 5 steps (80%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Fri Mar 27 05:55:23 2026]
+localrule all:
+    input: results/report.csv, data/msa.fasta, data/msa_summary.csv
+    jobid: 0
+    reason: Input files updated by another job: data/msa_summary.csv, data/msa.fasta, results/report.csv
+    resources: tmpdir=C:\Users\Morit\AppData\Local\Temp
+[Fri Mar 27 05:55:23 2026]
+Finished jobid: 0 (Rule: all)
+5 of 5 steps (100%) done
+Complete log(s): C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\.snakemake\log\2026-03-27T055519.292014.snakemake.log

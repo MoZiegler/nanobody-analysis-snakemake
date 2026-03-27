@@ -1,0 +1,2 @@
+2026-03-26 21:56:32,073 | INFO | Starting preprocessing: data\input.fasta -> data\cleaned.fasta
+2026-03-26 21:56:32,078 | INFO | Preprocessing completed. Retained 3/3 sequences.

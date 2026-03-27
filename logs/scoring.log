@@ -1,0 +1,3 @@
+2026-03-27 08:38:02,287 | INFO | Starting scoring step.
+2026-03-27 08:38:02,307 | INFO | Optional GROMACS data not provided; scoring without MD adjustments.
+2026-03-27 08:38:02,314 | INFO | Scoring completed for 3 sequences.

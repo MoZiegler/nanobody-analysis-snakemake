@@ -1,0 +1,3 @@
+2026-03-27 08:37:57,407 | INFO | Starting structure step with backend='esmfold'
+2026-03-27 08:37:57,407 | INFO | Using predictor backend: esmfold
+2026-03-27 08:38:00,708 | INFO | Structure step completed for 3 sequences.

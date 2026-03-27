@@ -1,0 +1,19 @@
+structure_backend: "mock"   # mock | esmfold | alphafold3 | rosetta
+use_gromacs: false
+run_msa: true
+esmfold_api_url: "https://api.esmatlas.com/foldSequence/v1/pdb/"
+esmfold_timeout_seconds: 120
+alphafold3_api_url: ""
+alphafold3_timeout_seconds: 300
+alphafold3_request_mode: "json"         # json | raw
+alphafold3_json_sequence_key: "sequence"
+alphafold3_response_pdb_key: "pdb"
+alphafold3_response_confidence_key: "confidence"
+rosetta_api_url: ""
+rosetta_timeout_seconds: 300
+rosetta_request_mode: "json"            # json | raw
+rosetta_json_sequence_key: "sequence"
+rosetta_response_pdb_key: "pdb"
+rosetta_response_confidence_key: "confidence"
+structure_pdb_dir: "data/pdb"
+log_level: "INFO"

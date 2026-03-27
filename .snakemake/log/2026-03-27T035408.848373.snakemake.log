@@ -1,0 +1,52 @@
+Config file config.yaml is extended by additional config specified via the command line.
+Assuming unrestricted shared filesystem usage.
+host: Moritz-Idea
+Building DAG of jobs...
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job          count
+---------  -------
+structure        1
+scoring          1
+all              1
+total            3
+
+Select jobs to execute...
+Execute 1 jobs...
+[Fri Mar 27 03:54:10 2026]
+localrule structure:
+    input: data/cleaned.fasta
+    output: data/structures.json
+    log: logs/structure.log
+    jobid: 4
+    reason: Code has changed since last execution; Params have changed since last execution: Union of exclusive params before and now across all output: before: 'mock' now: 'esmfold' 
+    resources: tmpdir=C:\Users\Morit\AppData\Local\Temp
+[Fri Mar 27 03:54:21 2026]
+Finished jobid: 4 (Rule: structure)
+1 of 3 steps (33%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Fri Mar 27 03:54:21 2026]
+localrule scoring:
+    input: data/features.csv, data/structures.json
+    output: results/report.csv
+    log: logs/scoring.log
+    jobid: 1
+    reason: Input files updated by another job: data/structures.json
+    resources: tmpdir=C:\Users\Morit\AppData\Local\Temp
+[Fri Mar 27 03:54:23 2026]
+Finished jobid: 1 (Rule: scoring)
+2 of 3 steps (67%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Fri Mar 27 03:54:23 2026]
+localrule all:
+    input: results/report.csv, results/msa.fasta, results/msa_summary.csv
+    jobid: 0
+    reason: Input files updated by another job: results/report.csv
+    resources: tmpdir=C:\Users\Morit\AppData\Local\Temp
+[Fri Mar 27 03:54:23 2026]
+Finished jobid: 0 (Rule: all)
+3 of 3 steps (100%) done
+Complete log(s): C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\.snakemake\log\2026-03-27T035408.848373.snakemake.log

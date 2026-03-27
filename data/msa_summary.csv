@@ -1,0 +1,4 @@
+sequence_id,alignment_length,nongap_length,gap_count,gap_fraction,consensus_identity
+nb_001,116,116,0,0.0,1.0
+nb_002,116,116,0,0.0,0.9482758620689655
+nb_003,116,116,0,0.0,0.9827586206896551

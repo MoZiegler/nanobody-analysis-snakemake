@@ -1,0 +1,8 @@
+snakemake
+pandas
+numpy
+biopython
+matplotlib
+ipykernel
+requests
+py3Dmol

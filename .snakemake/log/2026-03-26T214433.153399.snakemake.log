@@ -1,0 +1,47 @@
+Assuming unrestricted shared filesystem usage.
+host: Moritz-Idea
+Building DAG of jobs...
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job           count
+----------  -------
+preprocess        1
+features          1
+structure         1
+scoring           1
+all               1
+total             5
+
+Select jobs to execute...
+Execute 1 jobs...
+[Thu Mar 26 21:44:33 2026]
+localrule preprocess:
+    input: data/input.fasta
+    output: data/cleaned.fasta
+    log: logs/preprocess.log
+    jobid: 3
+    reason: Missing output files: data/cleaned.fasta
+    resources: tmpdir=C:\Users\Morit\AppData\Local\Temp
+RuleException:
+CalledProcessError in file "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\Snakefile", line 31:
+Command 'C:/Users/Morit/Desktop/Projekte/nanobody-analysis-snakemake/venv/Scripts/python.exe "C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\.snakemake\scripts\tmpw8_wal_9.preprocess.py"' returned non-zero exit status 1.
+[Thu Mar 26 21:44:37 2026]
+Error in rule preprocess:
+    message: None
+    jobid: 3
+    input: data/input.fasta
+    output: data/cleaned.fasta
+    log: logs/preprocess.log (check log file(s) for error details)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Thu Mar 26 21:44:37 2026]
+Error in rule preprocess:
+    message: None
+    jobid: 3
+    input: data/input.fasta
+    output: data/cleaned.fasta
+    log: logs/preprocess.log (check log file(s) for error details)
+Complete log(s): C:\Users\Morit\Desktop\Projekte\nanobody-analysis-snakemake\.snakemake\log\2026-03-26T214433.153399.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

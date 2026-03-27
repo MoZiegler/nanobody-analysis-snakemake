@@ -1,0 +1,35 @@
+[
+  {
+    "backend": "esmfold",
+    "confidence": 0.0089,
+    "stability": 0.0089,
+    "plddt_mean": 0.89,
+    "notes": "Real ESMFold inference via ESM Atlas API.",
+    "backend_requested": "esmfold",
+    "backend_used": "esmfold",
+    "sequence_id": "nb_001",
+    "pdb_file": "data/pdb/nb_001.pdb"
+  },
+  {
+    "backend": "esmfold",
+    "confidence": 0.0086,
+    "stability": 0.0086,
+    "plddt_mean": 0.86,
+    "notes": "Real ESMFold inference via ESM Atlas API.",
+    "backend_requested": "esmfold",
+    "backend_used": "esmfold",
+    "sequence_id": "nb_002",
+    "pdb_file": "data/pdb/nb_002.pdb"
+  },
+  {
+    "backend": "esmfold",
+    "confidence": 0.0088,
+    "stability": 0.0088,
+    "plddt_mean": 0.88,
+    "notes": "Real ESMFold inference via ESM Atlas API.",
+    "backend_requested": "esmfold",
+    "backend_used": "esmfold",
+    "sequence_id": "nb_003",
+    "pdb_file": "data/pdb/nb_003.pdb"
+  }
+]
