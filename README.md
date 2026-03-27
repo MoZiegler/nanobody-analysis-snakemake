@@ -361,13 +361,22 @@ and integrated into a clean, extensible pipeline architecture.
 
 ## References
 
-[1]	Z. Lin et al., “Evolutionary-scale prediction of atomic-level 		protein structure with a language model,” Science, vol. 379, no. 6637, pp. 1123–1130, Mar. 2023, doi: 10.1126/science.ade2574.
+[1]	Z. Lin et al., “Evolutionary-scale prediction of atomic-level protein structure with a language model,” Science, vol. 379, no. 6637, pp. 1123–1130, Mar. 2023, doi: 10.1126/science.ade2574.
+
 [2]	J. Abramson et al., “Accurate structure prediction of biomolecular interactions with AlphaFold 3,” Nature, vol. 630, no. 8016, pp. 493–500, Jun. 2024, doi: 10.1038/s41586-024-07487-w
+
 [3]	J. K. Leman et al., “Macromolecular modeling and design in Rosetta: recent methods and frameworks,” Nat Methods, vol. 17, no. 7, pp. 665–680, Jul. 2020, doi: 10.1038/s41592-020-0848-2.
+
 [4]	F. Mölder et al., “Sustainable data analysis with Snakemake,” Sep. 23, 2025, F1000Research. doi: 10.12688/f1000research.29032.3.
+
 [5]	M. Abraham et al., “GROMACS 2026.1 Manual,” Mar. 2026, doi: 10.5281/zenodo.18886967.
+
 [6]	S. Muyldermans, “Applications of Nanobodies,” Annual Review of Animal Biosciences, vol. 9, no. Volume 9, 2021, pp. 401–421, Feb. 2021, doi: 10.1146/annurev-animal-021419-083831.
+
 [7]	J. Kyte and R. F. Doolittle, “A simple method for displaying the hydropathic character of a protein,” J Mol Biol, vol. 157, no. 1, pp. 105–132, May 1982, doi: 10.1016/0022-2836(82)90515-0
+
 [8]	T. M. Lauer, N. J. Agrawal, N. Chennamsetty, K. Egodage, B. Helk, and B. L. Trout, “Developability index: a rapid in silico tool for the screening of antibody aggregation propensity,” J Pharm Sci, vol. 101, no. 1, pp. 102–115, Jan. 2012, doi: 10.1002/jps.22758.
+
 [9]	M. I. J. Raybould et al., “Five computational developability guidelines for therapeutic antibody profiling,” Proc Natl Acad Sci U S A, vol. 116, no. 10, pp. 4025–4030, Mar. 2019, doi: 10.1073/pnas.1810576116.
+
 [10] J. Jumper et al., “Highly accurate protein structure prediction with AlphaFold,” Nature, vol. 596, no. 7873, pp. 583–589, Aug. 2021, doi: 10.1038/s41586-021-03819-2.
